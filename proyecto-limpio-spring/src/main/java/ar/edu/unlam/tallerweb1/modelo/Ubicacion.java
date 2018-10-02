@@ -9,9 +9,19 @@ import javax.persistence.Id;
 public class Ubicacion {
 @Id
 @GeneratedValue (strategy = GenerationType.IDENTITY)
+private Long id;
 private Double latitud;
 private Double longitud;
 
+
+public Ubicacion() {
+	
+}
+
+public Ubicacion(Double latitud, Double longitud) {
+	this.latitud = latitud;
+	this.longitud = longitud;
+}
 
 public Double getLatitud() {
 	return latitud;
