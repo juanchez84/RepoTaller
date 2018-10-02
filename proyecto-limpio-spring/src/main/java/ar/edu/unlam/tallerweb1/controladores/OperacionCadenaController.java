@@ -17,6 +17,11 @@ public class OperacionCadenaController {
 			resultado = cadena.toUpperCase();
 		} if(operacion.equals("pasarAMinuscula")){
 			resultado = cadena.toLowerCase();
+			} if(operacion.equals("invertirOrden")) {
+				StringBuilder builder=new StringBuilder(cadena);
+				resultado = builder.reverse().toString();
+			} if(operacion.equals("cantidadDeCaracteres")){
+				resultado= String.valueOf(cadena.length());
 			}
 		
 		textoResultadoCompleto = "El resultado de " + operacion + " sobre " + cadena + " es " + resultado;
