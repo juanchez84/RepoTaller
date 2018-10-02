@@ -22,6 +22,16 @@ public class Ciudad {
 	@OneToOne(cascade = { CascadeType.ALL })
 	private Ubicacion ubicacionGeografica;
 	
+	
+	public Ciudad() {
+		
+	}
+	
+	public Ciudad(String nombre, Pais pais, Ubicacion ubicacionGeografica) {
+		this.nombre = nombre;
+		this.pais = pais;
+		this.ubicacionGeografica = ubicacionGeografica;
+	}
 
 	public Long getId() {
 		return id;

@@ -24,6 +24,14 @@ private Ciudad capital;
 @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 private Continente continente;
 
+public Pais(String nombre, Long habitantes, String idioma, Continente continente) {
+	
+	this.nombre = nombre;
+	this.habitantes = habitantes;
+	this.idioma = idioma; 
+	this.continente = continente; 
+}
+
 public Long getId() {
 	return id;
 }

@@ -13,6 +13,15 @@ private Long id;
 private String nombre;
 
 
+public Continente() {
+	
+}
+
+public Continente(String nombre) {
+	this.nombre = nombre;
+}
+
+
 
 public Long getId() {
 	return id;
