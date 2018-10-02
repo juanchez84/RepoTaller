@@ -110,49 +110,7 @@ public class PaisTest extends SpringTest {
 				assertThat(pais.getContinente().getNombre()).isEqualTo("Europa");
 			}
 		}
-<<<<<<< HEAD
 }	
-=======
-		
-		@Test
-		@Transactional @Rollback()
-		public void obtenerPaisesCapitalNorteTropicoCancer (){
-			@SuppressWarnings("unchecked")
-			List <Pais> busqueda = session.createCriteria(Pais.class)
-						.createAlias("capital", "ciu")
-						.createAlias("ciu.ubicacionGeografica", "ub")
-						.add(Restrictions.gt("ub.latitud", 20.00))
-						.list();
-			
-			assertThat (busqueda.size()).isEqualTo(2);
-			for (Pais pais : busqueda) {
-				assertThat (pais.getCapital().getUbicacion().getLatitud()).isGreaterThan(20.00);
-			}
-			
-			
-		}
-		
-		@Test
-		@Transactional @Rollback ()
-		public void obtenerCiudadesHemisferioSur (){
-			@SuppressWarnings("unchecked")
-			
-			List <Ciudad> busqueda = session.createCriteria(Ciudad.class)
-						.createAlias("ubicacionGeografica", "ub")
-						.add(Restrictions.lt("ub.latitud",00.00))
-						.list();
-			
-			assertThat (busqueda.size()).isEqualTo(2);
-			for (Ciudad ciudad : busqueda){
-				assertThat (ciudad.getUbicacion().getLatitud()).isLessThan(00.00);
-			}
-			
-			
-		}
-
-}	
-
->>>>>>> b53e98fc95425b04a1b211b4e1f3dd9a6a0aefc8
 	
 
 

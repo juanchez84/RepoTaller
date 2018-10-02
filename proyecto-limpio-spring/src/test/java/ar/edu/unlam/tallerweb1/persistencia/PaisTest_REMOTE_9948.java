@@ -110,9 +110,6 @@ public class PaisTest extends SpringTest {
 				assertThat(pais.getContinente().getNombre()).isEqualTo("Europa");
 			}
 		}
-<<<<<<< HEAD
-}	
-=======
 		
 		@Test
 		@Transactional @Rollback()
@@ -152,7 +149,6 @@ public class PaisTest extends SpringTest {
 
 }	
 
->>>>>>> b53e98fc95425b04a1b211b4e1f3dd9a6a0aefc8
 	
 
 
